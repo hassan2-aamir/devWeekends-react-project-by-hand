@@ -1,16 +1,33 @@
-# React + Vite
+# React Counter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Minimal counter app built with React and Vite. This README contains concise course notes and a short description of how the counter was implemented.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Simple counter with increment and decrement
+- Component-based structure
+- Small, focused example to demonstrate core React concepts
 
-## React Compiler
+## How this Counter App is implemented
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- State: `useState` in `src/App.jsx` stores the `count` value and exposes `add` and `subtract` handlers.
+- Component: a `Counter` component (in `src/components/Counter.jsx`) was created to render the UI and buttons.
+- Props: `count`, `add`, and `subtract` are passed from `App` to `Counter` as props to keep UI and logic separated.
+- Styling: intended to use Tailwind CSS utility classes on JSX elements for rapid styling. (If Tailwind is not yet configured, install and configure Tailwind/PostCSS per its docs.)
+- Extensibility: the app structure makes it easy to add hooks (custom data hooks), context, or Redux for larger state needs.
 
-## Expanding the ESLint configuration
+## Run locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Install dependencies and start the dev server:
+
+```bash
+npm install
+npm run dev
+```
+
+## Notes / Next steps
+
+- To enable Tailwind CSS, follow the official Tailwind + Vite setup and add utility classes to components.
+- Consider adding a custom hook for persisting the counter (localStorage) or connecting to Redux for global state examples.
+
+---
